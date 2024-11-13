@@ -1,0 +1,43 @@
+#include<iostream> // prewriteen code
+using namespace std; //cheat code
+
+//function declaration: tells the computer we are writing our own function
+void GambleGen();
+
+int main() { //start of program
+	srand(time(NULL)); //seed our rand function (only do this once at the top above your game loop)
+
+	GambleGen(); //function call: tells the computer to run the code from the function definition
+	GambleGen();
+	GambleGen();
+
+
+
+} // end of main
+
+//tells what the function does
+void GambleGen() {
+
+	//actual generator code///////////////////////////////////////////////////////////////////////////
+	int num = rand() % 100 + 1; //random number between 1-100
+	cout << "precent: " << num << endl; //prints out the number you get
+
+	if (num < 1) { //1 percent chance
+		cout << "Legendary" << endl;
+	}
+	else if (num < 15) { //14 percent chance
+		cout << "Epic" << endl;
+	}
+	else if (num < 65) { //50 percent chance
+		cout << "Common" << endl;
+	}
+	else if (num < 85) { //20% chance
+		cout << "Uncommon" << endl;
+	}
+	else { // 15% change
+		cout << "Rare" << endl;
+	}// end of code for generator////////////////////////////////////////////////////////////////////////
+
+
+
+} 
